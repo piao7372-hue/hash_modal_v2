@@ -1,0 +1,6 @@
+alpha: 0.5
+lambda_sem: 1.0
+lambda_pair: 0.2
+lambda_q: 0.1
+lambda_bal: 0.01
+bce_eps: 1.0e-6

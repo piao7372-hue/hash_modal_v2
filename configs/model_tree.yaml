@@ -1,0 +1,7 @@
+tree_depth: 2
+prototype_counts:
+  - 64
+  - 32
+feature_dim: 256
+dropout: 0.0
+eps: 1.0e-6

@@ -1,0 +1,78 @@
+{
+  "hash_head": {
+    "hash_bits": 64,
+    "relation_eps": 1e-06
+  },
+  "inputs": {
+    "feature_cache_id": "clip_vit_b32_formal_v1",
+    "semantic_set_id": "semantic_relation_highsignal_v1"
+  },
+  "loss": {
+    "alpha": 0.5,
+    "bce_eps": 1e-06,
+    "lambda_bal": 0.01,
+    "lambda_pair": 0.2,
+    "lambda_q": 0.1,
+    "lambda_sem": 1.0
+  },
+  "model_chebykan": {
+    "d_z": 256,
+    "eps": 1e-06,
+    "hidden_dims": [
+      512,
+      256
+    ],
+    "input_clip_value": 1.0,
+    "input_dim_image": 512,
+    "input_dim_text": 512,
+    "normalize_inputs": true,
+    "polynomial_order": 3
+  },
+  "model_graph": {
+    "f_dim": 128,
+    "input_dim": 256,
+    "k_neighbors": 7,
+    "propagation_steps": 1,
+    "residual_weight": 0.5,
+    "self_loop_weight": 1.0,
+    "similarity_eps": 1e-06
+  },
+  "model_tree": {
+    "dropout": 0.0,
+    "eps": 1e-06,
+    "feature_dim": 256,
+    "prototype_counts": [
+      64,
+      32
+    ],
+    "tree_depth": 2
+  },
+  "paths": {
+    "outputs_root": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\outputs\\train",
+    "processed_root": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\data\\processed"
+  },
+  "runtime": {
+    "amp_enabled": false,
+    "device": "cuda:0",
+    "dtype": "float32",
+    "multi_gpu": false
+  },
+  "stage_name": "stage_4_train",
+  "training": {
+    "batch_size": 50,
+    "best_metric": "loss_total",
+    "grad_clip_norm": 5.0,
+    "learning_rate": 0.001,
+    "log_every": 10,
+    "num_epochs": 1,
+    "num_workers": 0,
+    "run_name_prefix": "stage4_formal_v1",
+    "seed": 0,
+    "shuffle": true,
+    "weight_decay": 0.0001
+  },
+  "validation": {
+    "batch_size": 50,
+    "preferred_checkpoint": "best.pt"
+  }
+}

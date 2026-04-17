@@ -1,0 +1,33 @@
+stage_name: stage_4_train
+paths:
+  processed_root: data/processed
+  outputs_root: outputs/train
+inputs:
+  feature_cache_id: clip_vit_b32_formal_v1
+  semantic_set_id: semantic_relation_highsignal_v1
+configs:
+  model_chebykan: configs/model_chebykan.yaml
+  model_tree: configs/model_tree.yaml
+  model_graph: configs/model_graph.yaml
+  hash_head: configs/hash_head.yaml
+  loss: configs/loss.yaml
+runtime:
+  device: cuda:0
+  dtype: float32
+  amp_enabled: false
+  multi_gpu: false
+training:
+  run_name_prefix: stage4_formal_v1
+  seed: 0
+  batch_size: 50
+  num_epochs: 1
+  num_workers: 0
+  learning_rate: 1.0e-3
+  weight_decay: 1.0e-4
+  grad_clip_norm: 5.0
+  shuffle: true
+  log_every: 10
+  best_metric: loss_total
+validation:
+  batch_size: 50
+  preferred_checkpoint: best.pt

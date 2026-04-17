@@ -1,0 +1,243 @@
+{
+  "model_outputs": {
+    "B_binary_ok": true,
+    "H_I_shape": [
+      50,
+      64
+    ],
+    "H_T_shape": [
+      50,
+      64
+    ],
+    "H_range_ok": true,
+    "P_II_shape": [
+      50,
+      50
+    ],
+    "P_IT_shape": [
+      50,
+      50
+    ],
+    "P_TT_shape": [
+      50,
+      50
+    ],
+    "Y_I_shape": [
+      50,
+      256
+    ],
+    "Y_T_shape": [
+      50,
+      256
+    ],
+    "Z_I_shape": [
+      50,
+      256
+    ],
+    "Z_T_shape": [
+      50,
+      256
+    ],
+    "checkpoint_path": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\outputs\\train\\mirflickr25k\\stage4_formal_v1_mirflickr25k_run01\\best.pt",
+    "dataset": "mirflickr25k",
+    "device": "cuda:0",
+    "dtype": "float32",
+    "loss_metrics": {
+      "L_II": 1.599772334098816,
+      "L_IT": 0.49408388137817383,
+      "L_TT": 1.8255894184112549,
+      "L_bal": 0.062320880591869354,
+      "L_pair": 0.3519064486026764,
+      "L_q": 0.520286500453949,
+      "L_sem": 1.3504242897033691,
+      "loss_total": 1.4734574556350708
+    },
+    "model_summary": {
+      "F_I_shape": [
+        50,
+        128
+      ],
+      "F_T_shape": [
+        50,
+        128
+      ],
+      "H_I_shape": [
+        50,
+        64
+      ],
+      "H_T_shape": [
+        50,
+        64
+      ],
+      "Y_I_shape": [
+        50,
+        256
+      ],
+      "Y_T_shape": [
+        50,
+        256
+      ],
+      "Z_I_shape": [
+        50,
+        256
+      ],
+      "Z_T_shape": [
+        50,
+        256
+      ],
+      "graph": {
+        "image": {
+          "F_shape": [
+            50,
+            128
+          ],
+          "H_max": 0.952061653137207,
+          "H_min": -0.924927830696106,
+          "H_shape": [
+            50,
+            64
+          ],
+          "batch_size": 50,
+          "graph_density": 0.16,
+          "graph_shape": [
+            50,
+            50
+          ],
+          "k_neighbors": 7,
+          "row_sum_max": 1.0000001192092896,
+          "row_sum_min": 1.0
+        },
+        "text": {
+          "F_shape": [
+            50,
+            128
+          ],
+          "H_max": 0.9407461285591125,
+          "H_min": -0.8844878673553467,
+          "H_shape": [
+            50,
+            64
+          ],
+          "batch_size": 50,
+          "graph_density": 0.16,
+          "graph_shape": [
+            50,
+            50
+          ],
+          "k_neighbors": 7,
+          "row_sum_max": 1.000000238418579,
+          "row_sum_min": 0.9999998807907104
+        }
+      },
+      "tree": {
+        "image_layers": [
+          {
+            "attention_shape": [
+              50,
+              64
+            ],
+            "input_shape": [
+              50,
+              256
+            ],
+            "layer_index": 1,
+            "output_shape": [
+              50,
+              256
+            ],
+            "prototype_shape": [
+              64,
+              256
+            ]
+          },
+          {
+            "attention_shape": [
+              50,
+              32
+            ],
+            "input_shape": [
+              50,
+              256
+            ],
+            "layer_index": 2,
+            "output_shape": [
+              50,
+              256
+            ],
+            "prototype_shape": [
+              32,
+              256
+            ]
+          }
+        ],
+        "prototype_counts": [
+          64,
+          32
+        ],
+        "text_layers": [
+          {
+            "attention_shape": [
+              50,
+              64
+            ],
+            "input_shape": [
+              50,
+              256
+            ],
+            "layer_index": 1,
+            "output_shape": [
+              50,
+              256
+            ],
+            "prototype_shape": [
+              64,
+              256
+            ]
+          },
+          {
+            "attention_shape": [
+              50,
+              32
+            ],
+            "input_shape": [
+              50,
+              256
+            ],
+            "layer_index": 2,
+            "output_shape": [
+              50,
+              256
+            ],
+            "prototype_shape": [
+              32,
+              256
+            ]
+          }
+        ],
+        "tree_depth": 2
+      }
+    },
+    "run_name": "stage4_formal_v1_mirflickr25k_run01",
+    "validator_passed": true
+  },
+  "training_outputs": {
+    "checkpoint_device": "cuda:0",
+    "checkpoint_dtype": "float32",
+    "config_protocol_ok": true,
+    "dataset": "mirflickr25k",
+    "device": "cuda:0",
+    "dtype": "float32",
+    "finite_train_log": true,
+    "required_files_present": {
+      "best_checkpoint": true,
+      "config_snapshot": true,
+      "last_checkpoint": true,
+      "train_log": true,
+      "training_summary": true
+    },
+    "run_name": "stage4_formal_v1_mirflickr25k_run01",
+    "train_log_row_count": 101,
+    "training_summary_protocol_ok": true,
+    "validator_passed": true
+  }
+}

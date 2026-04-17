@@ -1,0 +1,10 @@
+input_dim_image: 512
+input_dim_text: 512
+d_z: 256
+polynomial_order: 3
+hidden_dims:
+  - 512
+  - 256
+normalize_inputs: true
+input_clip_value: 1.0
+eps: 1.0e-6

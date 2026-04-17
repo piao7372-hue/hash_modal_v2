@@ -1,0 +1,7 @@
+input_dim: 256
+f_dim: 128
+k_neighbors: 7
+propagation_steps: 1
+self_loop_weight: 1.0
+residual_weight: 0.5
+similarity_eps: 1.0e-6

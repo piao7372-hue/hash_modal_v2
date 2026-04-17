@@ -1,0 +1,203 @@
+{
+  "batch_size": 50,
+  "best_epoch": 1,
+  "best_metric_name": "loss_total",
+  "best_metric_value": 2.399960253238678,
+  "dataset": "mirflickr25k",
+  "device": "cuda:0",
+  "dtype": "float32",
+  "epoch_summaries": [
+    {
+      "L_II": 3.6325678181648255,
+      "L_IT": 0.5145801106095313,
+      "L_TT": 3.3449474072456358,
+      "L_bal": 0.13592639181762933,
+      "L_pair": 0.4729282121360302,
+      "L_q": 0.4505643445253372,
+      "L_sem": 2.258958910703659,
+      "dataset": "mirflickr25k",
+      "epoch": 1,
+      "event": "train_epoch",
+      "grad_norm": 45.36660590410233,
+      "loss_total": 2.399960253238678,
+      "run_name": "stage4_formal_v1_mirflickr25k_run01",
+      "step_count": 100
+    }
+  ],
+  "feature_cache_id": "clip_vit_b32_formal_v1",
+  "filtered_count": 20015,
+  "global_step": 100,
+  "manifest_filtered_sha256": "cb755501bdc1c35212944581e1099e7111cb2e8660d8017f5c4825571c974df2",
+  "model_summary": {
+    "F_I_shape": [
+      50,
+      128
+    ],
+    "F_T_shape": [
+      50,
+      128
+    ],
+    "H_I_shape": [
+      50,
+      64
+    ],
+    "H_T_shape": [
+      50,
+      64
+    ],
+    "Y_I_shape": [
+      50,
+      256
+    ],
+    "Y_T_shape": [
+      50,
+      256
+    ],
+    "Z_I_shape": [
+      50,
+      256
+    ],
+    "Z_T_shape": [
+      50,
+      256
+    ],
+    "graph": {
+      "image": {
+        "F_shape": [
+          50,
+          128
+        ],
+        "H_max": 0.7804921865463257,
+        "H_min": -0.8854178190231323,
+        "H_shape": [
+          50,
+          64
+        ],
+        "batch_size": 50,
+        "graph_density": 0.16,
+        "graph_shape": [
+          50,
+          50
+        ],
+        "k_neighbors": 7,
+        "row_sum_max": 1.0000001192092896,
+        "row_sum_min": 1.0
+      },
+      "text": {
+        "F_shape": [
+          50,
+          128
+        ],
+        "H_max": 0.8394978046417236,
+        "H_min": -0.9046390056610107,
+        "H_shape": [
+          50,
+          64
+        ],
+        "batch_size": 50,
+        "graph_density": 0.16,
+        "graph_shape": [
+          50,
+          50
+        ],
+        "k_neighbors": 7,
+        "row_sum_max": 1.0000001192092896,
+        "row_sum_min": 0.9999998807907104
+      }
+    },
+    "tree": {
+      "image_layers": [
+        {
+          "attention_shape": [
+            50,
+            64
+          ],
+          "input_shape": [
+            50,
+            256
+          ],
+          "layer_index": 1,
+          "output_shape": [
+            50,
+            256
+          ],
+          "prototype_shape": [
+            64,
+            256
+          ]
+        },
+        {
+          "attention_shape": [
+            50,
+            32
+          ],
+          "input_shape": [
+            50,
+            256
+          ],
+          "layer_index": 2,
+          "output_shape": [
+            50,
+            256
+          ],
+          "prototype_shape": [
+            32,
+            256
+          ]
+        }
+      ],
+      "prototype_counts": [
+        64,
+        32
+      ],
+      "text_layers": [
+        {
+          "attention_shape": [
+            50,
+            64
+          ],
+          "input_shape": [
+            50,
+            256
+          ],
+          "layer_index": 1,
+          "output_shape": [
+            50,
+            256
+          ],
+          "prototype_shape": [
+            64,
+            256
+          ]
+        },
+        {
+          "attention_shape": [
+            50,
+            32
+          ],
+          "input_shape": [
+            50,
+            256
+          ],
+          "layer_index": 2,
+          "output_shape": [
+            50,
+            256
+          ],
+          "prototype_shape": [
+            32,
+            256
+          ]
+        }
+      ],
+      "tree_depth": 2
+    }
+  },
+  "num_epochs": 1,
+  "run_dir": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\outputs\\train\\mirflickr25k\\stage4_formal_v1_mirflickr25k_run01",
+  "run_name": "stage4_formal_v1_mirflickr25k_run01",
+  "sample_id_order_sha256": "e713536b5012b35e31fe2e4ae890f7dde543b1f857aaf9f2697e204c1179e47d",
+  "semantic_set_id": "semantic_relation_highsignal_v1",
+  "stage_name": "stage_4_train",
+  "train_count": 5000
+}

@@ -3,7 +3,16 @@ __pycache__/
 .pytest_cache/
 .venv/
 venv/
-outputs/
+outputs/*
+!outputs/train/
+outputs/train/*
+!outputs/train/*/
+outputs/train/*/*
+!outputs/train/*/*/
+outputs/train/*/*/*
+!outputs/train/*/*/config_snapshot.json
+!outputs/train/*/*/training_summary.json
+!outputs/train/*/*/validator_summary.json
 pytest-cache-files-*/
 
 data/raw/
