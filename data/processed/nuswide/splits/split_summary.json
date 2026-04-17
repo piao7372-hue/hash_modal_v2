@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "ordered_total": 186577,
+    "query": 2000,
+    "retrieval": 184577,
+    "train": 5000
+  },
+  "dataset_name": "nuswide",
+  "relations": {
+    "query_retrieval_disjoint": true,
+    "train_subset_of_retrieval": true
+  },
+  "seed": 0
+}

@@ -1,0 +1,6 @@
+data/processed/mirflickr25k/manifest/manifest_raw.jsonl | 16625200 bytes | sha256 3e02b0cc5f22773e8943283bef4eb1ebc7786c5caf74ede5c6fc41ae53d634ba
+data/processed/mirflickr25k/manifest/manifest_filtered.jsonl | 13651344 bytes | sha256 cb755501bdc1c35212944581e1099e7111cb2e8660d8017f5c4825571c974df2
+data/processed/nuswide/manifest/manifest_raw.jsonl | 235412133 bytes | sha256 64d4496f4fe937cb9769f90590db731990e2854312cccca79d937e52d0036086
+data/processed/nuswide/manifest/manifest_filtered.jsonl | 145756475 bytes | sha256 81a0fc6a5b6e9f81c15cb570864aba65026464d381668653518614703a7f9b6c
+data/processed/mscoco/manifest/manifest_raw.jsonl | 155993616 bytes | sha256 e32dbcdc421250d821d94c045953de818a4c943655405369662c3fa47e11f6c2
+data/processed/mscoco/manifest/manifest_filtered.jsonl | 155993616 bytes | sha256 e32dbcdc421250d821d94c045953de818a4c943655405369662c3fa47e11f6c2

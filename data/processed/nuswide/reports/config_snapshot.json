@@ -1,0 +1,94 @@
+{
+  "dataset_config": {
+    "dataset_name": "nuswide",
+    "protocol": {
+      "concept_subset_rule": "choose top-10 classes by descending positive count, then lexical class name tie-break",
+      "counts": {
+        "filtered_total": 186577,
+        "query": 2000,
+        "raw_total": 269648,
+        "retrieval": 184577,
+        "train": 5000
+      },
+      "filter_rule": "truncate to the selected 10 dimensions and keep only samples with sum(label_vector) > 0",
+      "label_dim_output": 10,
+      "label_dim_raw": 81,
+      "query_retrieval_disjoint": true,
+      "sample_granularity": "one image + corresponding tags text + 81-dimensional raw label vector",
+      "split_names": [
+        "train",
+        "query",
+        "retrieval"
+      ],
+      "split_seed": 0,
+      "text_source_rule": "read tags from All_Tags.txt in original order and join with a single space",
+      "train_subset_of_retrieval": true
+    },
+    "raw_root": "data/raw/nuswide",
+    "source_contract": {
+      "all_labels_root": "official AllLabels directory containing 81 per-label files",
+      "all_tags_file": "official All_Tags.txt file from the raw release",
+      "concepts_file": "official Concepts81.txt file listing the 81 concept names",
+      "image_root": "official NUS-WIDE image directory flattened from the raw release"
+    },
+    "sources": {
+      "all_labels_root": "Groundtruth/AllLabels",
+      "all_tags_file": "NUS_WID_Tags/All_Tags.txt",
+      "concepts_file": "ConceptsList/Concepts81.txt",
+      "image_root": "images"
+    }
+  },
+  "dataset_config_path": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\configs\\datasets\\nuswide.yaml",
+  "preprocess_config": {
+    "artifacts": {
+      "manifest": {
+        "filtered_filename": "manifest_filtered.jsonl",
+        "meta_filename": "manifest_meta.json",
+        "raw_filename": "manifest_raw.jsonl"
+      },
+      "reports": {
+        "config_snapshot_filename": "config_snapshot.json",
+        "preprocess_summary_filename": "preprocess_summary.json",
+        "validator_summary_filename": "validator_summary.json"
+      },
+      "splits": {
+        "query_ids_filename": "query_ids.txt",
+        "retrieval_ids_filename": "retrieval_ids.txt",
+        "summary_filename": "split_summary.json",
+        "train_ids_filename": "train_ids.txt"
+      }
+    },
+    "datasets": {
+      "mirflickr25k": {
+        "config_path": "configs/datasets/mirflickr25k.yaml"
+      },
+      "mscoco": {
+        "config_path": "configs/datasets/mscoco.yaml"
+      },
+      "nuswide": {
+        "config_path": "configs/datasets/nuswide.yaml"
+      }
+    },
+    "paths": {
+      "outputs_root": "outputs",
+      "processed_root": "data/processed",
+      "raw_root": "data/raw"
+    },
+    "seed": 0,
+    "stage_name": "stage_1_preprocess",
+    "validation": {
+      "fail_on_count_mismatch": true,
+      "fail_on_missing_input": true,
+      "fail_on_missing_manifest_field": true,
+      "fail_on_missing_path": true,
+      "fail_on_rerun_inconsistency": true,
+      "fail_on_split_relation_mismatch": true,
+      "split_names": [
+        "train",
+        "query",
+        "retrieval"
+      ]
+    }
+  },
+  "preprocess_config_path": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\configs\\preprocess.yaml"
+}

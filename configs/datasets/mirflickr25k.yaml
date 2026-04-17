@@ -1,0 +1,35 @@
+dataset_name: mirflickr25k
+raw_root: data/raw/mirflickr25k
+sources:
+  image_root: mirflickr
+  raw_tags_root: mirflickr/meta/tags
+  annotations_root: mirflickr25k_annotations_v080
+  annotation_readme_file: mirflickr25k_annotations_v080/README.txt
+source_contract:
+  image_root: official MIRFlickr-25K directory containing im*.jpg images
+  raw_tags_root: official MIRFlickr-25K tags directory containing tags<index>.txt files
+  annotations_root: official MIRFlickr-25K annotation directory with 24 label files
+  annotation_readme_file: official MIRFlickr-25K annotation README
+protocol:
+  protocol_name: pragmatic_high_signal_v1
+  protocol_source: project_defined_not_ra_literal
+  sample_granularity: one image + corresponding tags text + 24-dimensional label vector
+  text_source_rule: keep original tag token order and join with a single space
+  filter_rule: remove empty-text rows, then rank by raw_tag_token_count desc, annotation_positive_count desc, sample_id asc, and keep the top 20015
+  label_dim_raw: 24
+  label_dim_output: 24
+  split_seed: 0
+  target_filtered_count: 20015
+  selection_policy: nonempty_text_then_rank_by_tag_density_and_label_density
+  split_names:
+    - train
+    - query
+    - retrieval
+  counts:
+    raw_total: 25000
+    filtered_total: 20015
+    query: 2000
+    retrieval: 18015
+    train: 5000
+  train_subset_of_retrieval: true
+  query_retrieval_disjoint: true

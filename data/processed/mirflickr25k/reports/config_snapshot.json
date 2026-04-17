@@ -1,0 +1,97 @@
+{
+  "dataset_config": {
+    "dataset_name": "mirflickr25k",
+    "protocol": {
+      "counts": {
+        "filtered_total": 20015,
+        "query": 2000,
+        "raw_total": 25000,
+        "retrieval": 18015,
+        "train": 5000
+      },
+      "filter_rule": "remove empty-text rows, then rank by raw_tag_token_count desc, annotation_positive_count desc, sample_id asc, and keep the top 20015",
+      "label_dim_output": 24,
+      "label_dim_raw": 24,
+      "protocol_name": "pragmatic_high_signal_v1",
+      "protocol_source": "project_defined_not_ra_literal",
+      "query_retrieval_disjoint": true,
+      "sample_granularity": "one image + corresponding tags text + 24-dimensional label vector",
+      "selection_policy": "nonempty_text_then_rank_by_tag_density_and_label_density",
+      "split_names": [
+        "train",
+        "query",
+        "retrieval"
+      ],
+      "split_seed": 0,
+      "target_filtered_count": 20015,
+      "text_source_rule": "keep original tag token order and join with a single space",
+      "train_subset_of_retrieval": true
+    },
+    "raw_root": "data/raw/mirflickr25k",
+    "source_contract": {
+      "annotation_readme_file": "official MIRFlickr-25K annotation README",
+      "annotations_root": "official MIRFlickr-25K annotation directory with 24 label files",
+      "image_root": "official MIRFlickr-25K directory containing im*.jpg images",
+      "raw_tags_root": "official MIRFlickr-25K tags directory containing tags<index>.txt files"
+    },
+    "sources": {
+      "annotation_readme_file": "mirflickr25k_annotations_v080/README.txt",
+      "annotations_root": "mirflickr25k_annotations_v080",
+      "image_root": "mirflickr",
+      "raw_tags_root": "mirflickr/meta/tags"
+    }
+  },
+  "dataset_config_path": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\configs\\datasets\\mirflickr25k.yaml",
+  "preprocess_config": {
+    "artifacts": {
+      "manifest": {
+        "filtered_filename": "manifest_filtered.jsonl",
+        "meta_filename": "manifest_meta.json",
+        "raw_filename": "manifest_raw.jsonl"
+      },
+      "reports": {
+        "config_snapshot_filename": "config_snapshot.json",
+        "preprocess_summary_filename": "preprocess_summary.json",
+        "validator_summary_filename": "validator_summary.json"
+      },
+      "splits": {
+        "query_ids_filename": "query_ids.txt",
+        "retrieval_ids_filename": "retrieval_ids.txt",
+        "summary_filename": "split_summary.json",
+        "train_ids_filename": "train_ids.txt"
+      }
+    },
+    "datasets": {
+      "mirflickr25k": {
+        "config_path": "configs/datasets/mirflickr25k.yaml"
+      },
+      "mscoco": {
+        "config_path": "configs/datasets/mscoco.yaml"
+      },
+      "nuswide": {
+        "config_path": "configs/datasets/nuswide.yaml"
+      }
+    },
+    "paths": {
+      "outputs_root": "outputs",
+      "processed_root": "data/processed",
+      "raw_root": "data/raw"
+    },
+    "seed": 0,
+    "stage_name": "stage_1_preprocess",
+    "validation": {
+      "fail_on_count_mismatch": true,
+      "fail_on_missing_input": true,
+      "fail_on_missing_manifest_field": true,
+      "fail_on_missing_path": true,
+      "fail_on_rerun_inconsistency": true,
+      "fail_on_split_relation_mismatch": true,
+      "split_names": [
+        "train",
+        "query",
+        "retrieval"
+      ]
+    }
+  },
+  "preprocess_config_path": "C:\\Users\\ASVS\\Desktop\\hash_modal_v2\\configs\\preprocess.yaml"
+}

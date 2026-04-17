@@ -1,0 +1,38 @@
+stage_name: stage_1_preprocess
+seed: 0
+paths:
+  raw_root: data/raw
+  processed_root: data/processed
+  outputs_root: outputs
+datasets:
+  mirflickr25k:
+    config_path: configs/datasets/mirflickr25k.yaml
+  nuswide:
+    config_path: configs/datasets/nuswide.yaml
+  mscoco:
+    config_path: configs/datasets/mscoco.yaml
+artifacts:
+  manifest:
+    raw_filename: manifest_raw.jsonl
+    filtered_filename: manifest_filtered.jsonl
+    meta_filename: manifest_meta.json
+  splits:
+    query_ids_filename: query_ids.txt
+    retrieval_ids_filename: retrieval_ids.txt
+    train_ids_filename: train_ids.txt
+    summary_filename: split_summary.json
+  reports:
+    preprocess_summary_filename: preprocess_summary.json
+    validator_summary_filename: validator_summary.json
+    config_snapshot_filename: config_snapshot.json
+validation:
+  split_names:
+    - train
+    - query
+    - retrieval
+  fail_on_missing_input: true
+  fail_on_count_mismatch: true
+  fail_on_split_relation_mismatch: true
+  fail_on_missing_manifest_field: true
+  fail_on_missing_path: true
+  fail_on_rerun_inconsistency: true

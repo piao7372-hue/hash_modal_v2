@@ -1,0 +1,32 @@
+dataset_name: nuswide
+raw_root: data/raw/nuswide
+sources:
+  image_root: images
+  all_tags_file: NUS_WID_Tags/All_Tags.txt
+  all_labels_root: Groundtruth/AllLabels
+  concepts_file: ConceptsList/Concepts81.txt
+source_contract:
+  image_root: official NUS-WIDE image directory flattened from the raw release
+  all_tags_file: official All_Tags.txt file from the raw release
+  all_labels_root: official AllLabels directory containing 81 per-label files
+  concepts_file: official Concepts81.txt file listing the 81 concept names
+protocol:
+  sample_granularity: one image + corresponding tags text + 81-dimensional raw label vector
+  text_source_rule: read tags from All_Tags.txt in original order and join with a single space
+  concept_subset_rule: choose top-10 classes by descending positive count, then lexical class name tie-break
+  filter_rule: truncate to the selected 10 dimensions and keep only samples with sum(label_vector) > 0
+  label_dim_raw: 81
+  label_dim_output: 10
+  split_seed: 0
+  split_names:
+    - train
+    - query
+    - retrieval
+  counts:
+    raw_total: 269648
+    filtered_total: 186577
+    query: 2000
+    retrieval: 184577
+    train: 5000
+  train_subset_of_retrieval: true
+  query_retrieval_disjoint: true

@@ -1,0 +1,36 @@
+dataset_name: mscoco
+raw_root: data/raw/mscoco
+sources:
+  images_train2014: train2014/train2014
+  images_val2014: val2014/val2014
+  captions_train2014: annotations_trainval2014/annotations/captions_train2014.json
+  captions_val2014: annotations_trainval2014/annotations/captions_val2014.json
+  instances_train2014: annotations_trainval2014/annotations/instances_train2014.json
+  instances_val2014: annotations_trainval2014/annotations/instances_val2014.json
+source_contract:
+  images_train2014: official COCO train2014 image directory
+  images_val2014: official COCO val2014 image directory
+  captions_train2014: official captions_train2014.json annotation file
+  captions_val2014: official captions_val2014.json annotation file
+  instances_train2014: official instances_train2014.json annotation file
+  instances_val2014: official instances_val2014.json annotation file
+protocol:
+  sample_granularity: image-level pair with all captions merged into one text string
+  text_source_rule: sort captions by annotation id ascending and join with ". "
+  filter_rule: keep all valid image-level pairs after aggregation
+  quantity_closure_rule: enforce train subset of retrieval so query + retrieval closes to 123287 total samples
+  label_dim_raw: 80
+  label_dim_output: 80
+  split_seed: 0
+  split_names:
+    - train
+    - query
+    - retrieval
+  counts:
+    raw_total: 123287
+    filtered_total: 123287
+    query: 2000
+    retrieval: 121287
+    train: 5000
+  train_subset_of_retrieval: true
+  query_retrieval_disjoint: true

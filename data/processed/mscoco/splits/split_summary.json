@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "ordered_total": 123287,
+    "query": 2000,
+    "retrieval": 121287,
+    "train": 5000
+  },
+  "dataset_name": "mscoco",
+  "relations": {
+    "query_retrieval_disjoint": true,
+    "train_subset_of_retrieval": true
+  },
+  "seed": 0
+}
