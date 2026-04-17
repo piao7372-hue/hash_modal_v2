@@ -10,6 +10,11 @@ if str(PROJECT_ROOT) not in sys.path:
 from src.datasets import DATASET_ADAPTERS, SUPPORTED_DATASETS
 from src.datasets.split_builder import build_query_retrieval_train_splits
 from src.features import load_feature_extraction_config, validate_feature_cache
+from src.semantic import (
+    build_validator_summary,
+    load_semantic_relation_config,
+    run_formal_semantic_relation,
+)
 
 
 def test_supported_datasets_are_registered() -> None:
@@ -35,3 +40,9 @@ def test_split_builder_enforces_query_retrieval_train_contract() -> None:
 def test_stage2_interfaces_are_importable() -> None:
     assert callable(load_feature_extraction_config)
     assert callable(validate_feature_cache)
+
+
+def test_stage3_interfaces_are_importable() -> None:
+    assert callable(load_semantic_relation_config)
+    assert callable(run_formal_semantic_relation)
+    assert callable(build_validator_summary)

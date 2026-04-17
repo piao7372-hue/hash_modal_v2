@@ -1,0 +1,24 @@
+{
+  "csr_check_passed": true,
+  "dataset": "nuswide",
+  "diagonal_coverage_passed": true,
+  "dtype_check_passed": true,
+  "feature_meta_matches": true,
+  "filtered_count": 186577,
+  "formula_S_passed": true,
+  "formula_S_tilde_passed": true,
+  "inf_check_passed": true,
+  "manifest_sha256_matches_meta": true,
+  "matrix_shape": [
+    186577,
+    186577
+  ],
+  "meta_fields_complete": true,
+  "nan_check_passed": true,
+  "sample_id_order_matches_meta": true,
+  "semantic_set_id": "semantic_relation_highsignal_v1",
+  "support_consistency_passed": true,
+  "support_matches_topk_union": true,
+  "validator_passed": true,
+  "value_range_passed": true
+}

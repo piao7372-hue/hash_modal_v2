@@ -1,0 +1,25 @@
+paths:
+  processed_root: data/processed
+semantic_set_id: semantic_relation_highsignal_v1
+protocol_name: semantic_relation_highsignal_v1
+protocol_source: project_defined_formal_stage3
+input:
+  feature_cache_id: clip_vit_b32_formal_v1
+support:
+  ann_backend: hnswlib
+  direct_topk: 200
+  intra_topk: 100
+  final_topk: 50
+  hnsw_M: 32
+  hnsw_ef_construction: 200
+  hnsw_ef_search: 256
+relation:
+  lambda: 0.7
+  tau: 0.07
+runtime:
+  dtype: float32
+outputs:
+  cache_dir: semantic_cache
+validation:
+  validator_entry: scripts/validate_semantic_cache.py
+  l2_norm_atol: 1.0e-4

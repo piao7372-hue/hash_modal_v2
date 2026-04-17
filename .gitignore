@@ -13,3 +13,6 @@ data/processed/**/manifest/*.jsonl
 data/processed/*/feature_cache/*/X_I.npy
 data/processed/*/feature_cache/*/X_T.npy
 data/processed/*/feature_cache/*/*.tmp.npy
+data/processed/*/semantic_cache/*/*.npz
+!data/processed/*/semantic_cache/*/meta.json
+!data/processed/*/semantic_cache/*/validator_summary.json
