@@ -1,0 +1,27 @@
+{
+  "dataset": "mscoco",
+  "dtype_ok": true,
+  "failure_reason": null,
+  "feature_dim_image": 512,
+  "feature_dim_text": 512,
+  "feature_set_id": "clip_vit_b32_formal_v1",
+  "filtered_count_expected": 123287,
+  "filtered_count_observed": 123287,
+  "inf_check_passed": true,
+  "l2_norm_check_passed": true,
+  "meta_consistency_passed": true,
+  "meta_exists": true,
+  "nan_check_passed": true,
+  "order_consistency_passed": true,
+  "validator_passed": true,
+  "x_i_exists": true,
+  "x_i_shape": [
+    123287,
+    512
+  ],
+  "x_t_exists": true,
+  "x_t_shape": [
+    123287,
+    512
+  ]
+}

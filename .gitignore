@@ -10,4 +10,6 @@ data/raw/
 *.zip
 
 data/processed/**/manifest/*.jsonl
-
+data/processed/*/feature_cache/*/X_I.npy
+data/processed/*/feature_cache/*/X_T.npy
+data/processed/*/feature_cache/*/*.tmp.npy

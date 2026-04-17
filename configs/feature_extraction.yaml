@@ -1,0 +1,41 @@
+stage_name: stage_2_feature_extraction
+paths:
+  processed_root: data/processed
+model:
+  feature_set_id: clip_vit_b32_formal_v1
+  model_name: openai/clip-vit-base-patch32
+  model_local_path: null
+preprocessing:
+  image_size: 224
+  resize_mode: shortest_edge
+  interpolation: bicubic
+  crop_mode: center_crop
+  clip_mean:
+    - 0.48145466
+    - 0.4578275
+    - 0.40821073
+  clip_std:
+    - 0.26862954
+    - 0.26130258
+    - 0.27577711
+tokenizer:
+  tokenizer_name: openai/clip-vit-base-patch32
+  max_length: 77
+  padding: max_length
+  truncation: true
+  return_attention_mask: true
+runtime:
+  dtype: float32
+  device: cuda:0
+  image_batch_size: 64
+  text_batch_size: 256
+outputs:
+  feature_cache_dirname: feature_cache
+  x_i_filename: X_I.npy
+  x_t_filename: X_T.npy
+  meta_filename: meta.json
+  validator_summary_filename: validator_summary.json
+validation:
+  expected_feature_dim: 512
+  l2_norm_atol: 1.0e-4
+  sample_order_source: manifest_filtered.jsonl_line_order
